@@ -11,6 +11,10 @@ export default async function APIService(endpoint, method, body){
      options['body'] = JSON.stringify(body)
 
     const response = await fetch(API_URL+endpoint, options);
+
+    if(response.status === 401)
+      return response;
+    //console.log(response)
     return response.json();
   }
   catch (e) {

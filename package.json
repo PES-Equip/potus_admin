@@ -12,11 +12,17 @@
     "@headlessui/react": "^1.7.7",
     "@react-oauth/google": "^0.5.1",
     "@reduxjs/toolkit": "^1.9.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.40",
     "react": "^18.2.0",
+    "react-clock": "^4.0.0",
+    "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-live-clock": "^6.1.1",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.6.1"
+    "react-router-dom": "^6.6.1",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

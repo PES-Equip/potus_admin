@@ -5,7 +5,9 @@ export const getUserProfile = () => async (dispatch) => {
     try {
       dispatch(getUserPending());
   
-      const response = APIService("/user/profile",'GET').then((response) => {
+      APIService("/user/profile",'GET').then((response) => {
+
+        console.log(response)
         if(response.user && response.user.admin){
             dispatch(getUserSuccess(response.user))
         }
