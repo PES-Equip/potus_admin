@@ -40,7 +40,7 @@ function LoginPage () {
     }
 
     useEffect(() => {
-        if(userState.error){
+        if(userState.error && userState.error !== ""){
             addError("User is not admin");
         }
 

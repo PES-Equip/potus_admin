@@ -33,7 +33,6 @@ function HomePage () {
         if(regions === null){
             APIService('/airquality/regions', 'GET').then(data => {
                 setRegions(data);
-                console.log(data)
             });
         }
     })
@@ -129,8 +128,6 @@ function HomePage () {
                                 </button>
                             </div>
                          }
-                        {/* regions ? <Region region={regions[0]}/> : "LOADING"*/}
-                        {/*regions ? regions.map((region, i) => (<Region key={i} region={region}/>)) : "Loading"*/}
                     </div>
                     
                 </div>

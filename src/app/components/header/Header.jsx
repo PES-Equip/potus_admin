@@ -13,7 +13,7 @@ export default function Header() {
 
     return(
         <>
-        <Popover className="static w-full bg-green-600 z-5 shadow-black shadow">
+        <Popover className="static w-full bg-blue-400 z-5 shadow-black shadow">
             <div className="mx-auto max-w-7x1 px-4 sm:px-6">
                 <div className="flex items-center justify-center py-6">
                     <div className='flex-1'><HeaderMenu/></div>
