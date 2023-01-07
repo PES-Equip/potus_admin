@@ -18,6 +18,9 @@ import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import CreateToken from "../components/pages/Tokens/CreateToken";
 import GeneralTable from "../components/GeneralTable";
 import TokenRow from "../components/pages/Tokens/TokenRow";
+import DeleteToken from "../components/pages/Tokens/DeleteToken";
+import EditToken from "../components/pages/Tokens/EditToken";
+import RefreshToken from "../components/pages/Tokens/RefreshToken";
 
 
 function TokenPage () {
@@ -90,6 +93,33 @@ function TokenPage () {
                         ))}
                         </>}
                 />
+                
+                <DeleteToken
+                    setShow={setShowDeleteDialog}
+                    show={showDeleteDialog}
+                    selectedToken={selectedToken}
+                    setTokens={setTokens}
+                    tokens={tokens}
+                />
+                
+                <EditToken 
+                    setShow={setShowEditDialog}
+                    show={showEditDialog}
+                    selectedToken={selectedToken}
+                    setTokens={setTokens}
+                    tokens={tokens}
+                />
+                
+                <RefreshToken 
+                    setShow={setShowRefreshDialog}
+                    show={showRefreshDialog}
+                    selectedToken={selectedToken}
+                    setTokens={setTokens}
+                    tokens={tokens}
+                />
+
+                        
+
 
                 </div></>
                 : "LOADING"

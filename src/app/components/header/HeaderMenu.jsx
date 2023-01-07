@@ -21,9 +21,8 @@ export default function HeaderMenu() {
     }
 
     const items = [
-        {href: "/users", text: "BLOCK USERS", icon: <RiUserSettingsLine size={22} className="mr-2"/>},
-        {href: "/admin", text: 'ADMIN',  icon: <MdGroups size={23} className="mr-2"/>},
         {href: "/tokens", text: "TOKENS",  icon: <GiToken size={22} className="mr-2"/>},
+        {href: "/users", text: "BLOCK USERS", icon: <RiUserSettingsLine size={22} className="mr-2"/>},
     ]
 
     return(

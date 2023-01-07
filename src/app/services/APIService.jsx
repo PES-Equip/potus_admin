@@ -12,9 +12,9 @@ export default async function APIService(endpoint, method, body){
 
     const response = await fetch(API_URL+endpoint, options);
 
-    if(response.status === 401)
+    if(response.status === 401 || response.status === 204)
       return response;
-    //console.log(response)
+
     return response.json();
   }
   catch (e) {
@@ -25,7 +25,7 @@ export default async function APIService(endpoint, method, body){
   }
 }
 
-const API_URL = 'http://192.168.18.181:8080/api';
+const API_URL = 'http://localhost:8080/api';
 
 function getHeader(){
 
