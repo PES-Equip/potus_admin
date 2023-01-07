@@ -16,6 +16,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import CreateToken from "../components/pages/Tokens/CreateToken";
+import GeneralTable from "../components/GeneralTable";
+import TokenRow from "../components/pages/Tokens/TokenRow";
 
 
 function TokenPage () {
@@ -54,43 +56,40 @@ function TokenPage () {
                          {/* NEW TOKEN */}
                 <CreateToken tokens={tokens} setTokens={setTokens}/>
 
-                {/*
+                
                 <GeneralTable 
-                    header={<AdminTokensHeader/>}
-                    body={<AdminTokensBody tokens={tokens} setSelectedToken={setSelectedToken} 
-                            setShowDialogs={{
-                                delete: setShowDeleteDialog,
-                                refresh: setShowRefreshDialog,
-                                edit: setShowEditDialog
-                            }}/>}
+                    header={ <>
+                            <tr className="">
+                                <th scope="col" className='lg:w-1/12 text-sm text-center font-medium text-gray-900 px-6 py-4'>
+                                    #
+                                </th>
+                                <th scope="col"  className='lg:w-1/12 text-sm text-center font-medium text-gray-900 px-6 py-4'>
+                                    Name
+                                </th>
+                                <th scope="col"  className='lg:w-5/12 text-sm text-center font-medium text-gray-900 px-6 py-4'>
+                                    Value
+                                </th>
+                                <th scope="col"  className='lg:w-5/12 text-sm text-center font-medium text-gray-900 px-6 py-4'>
+                                    Actions
+                                </th>
+                            </tr>
+                        </>}
+                    body={<>
+                        { Object.values(tokens).map((token,index) => (
+                            <TokenRow 
+                                key={`row-${index}`}
+                                token={token}
+                                index={index}
+                                setSelectedToken={setSelectedToken}
+                                setShowDialogs={{
+                                    delete: setShowDeleteDialog,
+                                    refresh: setShowRefreshDialog,
+                                    edit: setShowEditDialog
+                                }}
+                                />
+                        ))}
+                        </>}
                 />
-
-                <DeleteToken 
-                    setShow={setShowDeleteDialog}
-                    show={showDeleteDialog}
-                    selectedToken={selectedToken}
-                    setTokens={setTokens}
-                    tokens={tokens}
-                />
-
-                <EditToken 
-                    setShow={setShowEditDialog}
-                    show={showEditDialog}
-                    selectedToken={selectedToken}
-                    setTokens={setTokens}
-                    tokens={tokens}
-                />
-
-                <RefreshToken 
-                    setShow={setShowRefreshDialog}
-                    show={showRefreshDialog}
-                    selectedToken={selectedToken}
-                    setTokens={setTokens}
-                    tokens={tokens}
-                />
-
-                        */}
-
 
                 </div></>
                 : "LOADING"
