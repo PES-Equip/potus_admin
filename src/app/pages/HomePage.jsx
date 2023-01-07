@@ -129,8 +129,6 @@ function HomePage () {
                                 </button>
                             </div>
                          }
-                        {/* regions ? <Region region={regions[0]}/> : "LOADING"*/}
-                        {/*regions ? regions.map((region, i) => (<Region key={i} region={region}/>)) : "Loading"*/}
                     </div>
                     
                 </div>

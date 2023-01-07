@@ -53,7 +53,7 @@ export default function HeaderMenu() {
                 leaveTo="transform opacity-0 scale-95"
             >
                 
-            <Menu.Items className="h-[calc(100vh-96px)] overflow-auto  absolute z-20 left-0 mt-6 lg:w-80 w-full  bg-green-700 shadow-2xl border-t-green-900 border-t-2 border-solid">
+            <Menu.Items className="h-[calc(100vh-96px)] overflow-auto  absolute z-20 left-0 mt-6 lg:w-80 w-full  bg-blue-600 shadow-2xl border-t-green-900 border-t-2 border-solid">
                 <div className="text-primary">
                 
                 

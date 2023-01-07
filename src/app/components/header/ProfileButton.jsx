@@ -42,7 +42,7 @@ export default function ProfileButton(){
                         )}
                     </Menu.Item>
                     
-                    <Menu.Item className="w-full  rounded-bl-lg  text-center flex items-center  justify-center bg-green-500 hover:bg-green-600 active:bg-green-900 py-3">
+                    <Menu.Item className="w-full  rounded-bl-lg  text-center flex items-center  justify-center btn-secondary py-3">
                     {({ active }) => (
                         <a href="/logout" className="">
                             <MdLogout size={22} className="fill-white"/>
