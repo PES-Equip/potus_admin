@@ -65,8 +65,8 @@ export default function HeaderMenu() {
                 <div className="text-primary">
                 
                 {items.map((item,index) => (
-                    <div className="w-full bg-blue-600 hover:bg-blue-800 active:bg-blue-900">
-                    <a key={`general-${index}`} href={item.href} className="w-full flex align-middle py-2">
+                    <div  key={`general-${index}`} className="w-full bg-blue-600 hover:bg-blue-800 active:bg-blue-900">
+                    <a href={item.href} className="w-full flex align-middle py-2">
                         <div className="mx-2">
                             {item.icon}
                         </div>
