@@ -33,7 +33,6 @@ function HomePage () {
         if(regions === null){
             APIService('/airquality/regions', 'GET').then(data => {
                 setRegions(data);
-                console.log(data)
             });
         }
     })
