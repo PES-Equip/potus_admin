@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
+import { MdGroups } from "react-icons/md";
+import { RiUserSettingsLine } from "react-icons/ri";
+import { GiToken } from "react-icons/gi";
+
 
 
 export default function HeaderMenu() {
@@ -16,6 +20,11 @@ export default function HeaderMenu() {
         
     }
 
+    const items = [
+        {href: "/users", text: "BLOCK USERS", icon: <RiUserSettingsLine size={22} className="mr-2"/>},
+        {href: "/admin", text: 'ADMIN',  icon: <MdGroups size={23} className="mr-2"/>},
+        {href: "/tokens", text: "TOKENS",  icon: <GiToken size={22} className="mr-2"/>},
+    ]
 
     return(
         <Menu as="div" className="" >
@@ -56,7 +65,16 @@ export default function HeaderMenu() {
             <Menu.Items className="h-[calc(100vh-96px)] overflow-auto  absolute z-20 left-0 mt-6 lg:w-80 w-full  bg-blue-600 shadow-2xl border-t-green-900 border-t-2 border-solid">
                 <div className="text-primary">
                 
-                
+                {items.map((item,index) => (
+                    <div className="w-full bg-blue-600 hover:bg-blue-800 active:bg-blue-900">
+                    <a key={`general-${index}`} href={item.href} className="w-full flex align-middle py-2">
+                        <div className="mx-2">
+                            {item.icon}
+                        </div>
+                        <span className="ml-2">{item.text}</span>
+                    </a>
+                    </div>
+                ))}
                     
                 </div>
             </Menu.Items>
