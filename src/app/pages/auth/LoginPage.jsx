@@ -13,11 +13,6 @@ function LoginPage () {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-
-
-
-
-
     const handleLogin = async (credentialResponse) => {
         dispatch(authSuccess(credentialResponse.credential))
                 localStorage.setItem("token", JSON.stringify(credentialResponse.credential));
