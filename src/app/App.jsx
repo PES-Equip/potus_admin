@@ -7,6 +7,8 @@ import LoginPage from './pages/auth/LoginPage';
 import HomePage from './pages/HomePage';
 import LogoutPage from './pages/auth/LogoutPage';
 import TokenPage from './pages/TokenPage';
+import BanPage from './pages/BanPage';
+import BanDecisionPage from './pages/BanDecisionPage';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
             <Route path="/logout" element={<LogoutPage/>}/>
 
             <Route path="/tokens" element={<TokenPage/>}/>
+            <Route path="/users" element={<BanPage/>}/>
+            <Route path="/users/:id" element={<BanDecisionPage/>}/>
           </Routes>
         </div>
         </BrowserRouter>

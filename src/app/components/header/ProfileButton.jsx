@@ -31,16 +31,6 @@ export default function ProfileButton(){
                 
             <Menu.Items className="mt-[10vh] lg:mt-[7.3vh] h-50 rounded-bl-lg absolute z-20 right-0 mt-17.5 w-full lg:w-40  bg-green-700 shadow-2xl border-t-green-900 border-t-2 border-solid">
                 <div className="text-primay grid justify-items-center">
-                    <Menu.Item className="w-full text-center flex items-center  justify-center btn-secondary py-3">
-                        {({ active }) => (
-                            <a href="/profile" className="">
-                                <MdAccountCircle size={22} className="fill-white"/>
-                                <span className="ml-2 text-primay" >
-                                    PROFILE
-                                </span>
-                            </a>
-                        )}
-                    </Menu.Item>
                     
                     <Menu.Item className="w-full  rounded-bl-lg  text-center flex items-center  justify-center btn-secondary py-3">
                     {({ active }) => (
