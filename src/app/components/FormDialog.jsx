@@ -5,6 +5,7 @@ export default function FormDialog({
     icon_color='bg-blue-400',
     confirmType="btn-primary",
     title,
+    text,
     fields,
     confirmText,
     handleAction,
@@ -29,6 +30,9 @@ export default function FormDialog({
                                         <h3 className="text-lg font-medium leading-6 text-gray-900" id="modal-title">
                                             {title}
                                         </h3>
+                                        <span className="my-2 text-md font-medium leading-6 text-gray-900" id="modal-title">
+                                            {text}
+                                        </span>
 
                                         {error &&
                                         <div className="mt-4 text-red-600 flex">

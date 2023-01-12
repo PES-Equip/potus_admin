@@ -72,7 +72,7 @@ function BanDecisionPage () {
                     <div className="my-5 flex justify-center">
                         <div className="flex flex-col text-center">
                         <div className="flex mt-5">
-                        <button  className="mt-5 lg:ml-5 lg:mt-0 btn-primary ">
+                        <button  className="mt-5 lg:ml-5 lg:mt-0 btn-primary " onClick={()=>setShowNotBan(true)}>
                             <span>NOT BAN USER</span>
                         </button>
 
@@ -115,7 +115,7 @@ function BanDecisionPage () {
                 </div>
                 
                 <BanAccount show={showBan} setShow={setShowBan} reported={request.user}/>
-                <NoBanAccount setShow={setShowNoBan} show={showNotBan} reported={request.user} />
+                <NoBanAccount setShow={setShowNotBan} show={showNotBan} reported={request.user} />
                 </>
                 : "LOADING"
                 }

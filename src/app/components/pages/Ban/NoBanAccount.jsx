@@ -30,11 +30,12 @@ export default function NoBanAccount({
             { show &&
                 <FormDialog
                 icon={<GiToken size={25} className="fill-white"/>}
-                title="BAN ACCOUNT"
+                title="NOT BAN ACCOUNT"
                 text="Please confirm that you DON'T want to ban this account"
                 confirmText="CONFIRM"
                 handleAction={handleBan}
                 handleShow={()=>setShow(false)}
+                fields={[]}
                 item={""}
                 error={error}
                 />
